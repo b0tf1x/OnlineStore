@@ -14,6 +14,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import java.time.LocalDateTime;
 
 @Entity
 @Getter
@@ -32,4 +33,5 @@ public class Review {
     @JoinColumn(name = "user_id")
     private User creator;
     private String description;
+    private LocalDateTime date;
 }

@@ -5,15 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import producer.model.Producer;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Getter
@@ -38,7 +32,7 @@ public class Product {
     private Category category;
     @ManyToOne
     @JoinColumn(name = "producer_id")
-    private Product product;
-    private Boolean onSale;
-    private Long salePrice;
+    private Producer producer;
+    private Boolean onSale = false;
+    private Long salePrice = null;
 }
