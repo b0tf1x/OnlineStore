@@ -33,4 +33,5 @@ public class ProductDto {
     private Long producer;
     private Boolean onSale;
     private Long salePrice;
+    private String img;
 }

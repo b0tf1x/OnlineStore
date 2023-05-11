@@ -22,4 +22,5 @@ public class ProductFullDto {
     private Producer producer;
     private Boolean onSale;
     private Long salePrice;
+    private String img;
 }

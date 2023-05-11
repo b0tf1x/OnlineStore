@@ -17,7 +17,8 @@ public class ProductMapper {
                 product.getCategory().getId(),
                 product.getProducer().getId(),
                 product.getOnSale(),
-                product.getSalePrice());
+                product.getSalePrice(),
+                product.getImg());
     }
 
     public static Product toProduct(ProductDto productDto, Category category, Producer producer) {
@@ -30,7 +31,8 @@ public class ProductMapper {
                 category,
                 producer,
                 productDto.getOnSale(),
-                productDto.getSalePrice());
+                productDto.getSalePrice(),
+                productDto.getImg());
     }
 
     public static ProductFullDto toProductFullDto(Product product) {
@@ -43,6 +45,7 @@ public class ProductMapper {
                 product.getCategory(),
                 product.getProducer(),
                 product.getOnSale(),
-                product.getSalePrice());
+                product.getSalePrice(),
+                product.getImg());
     }
 }

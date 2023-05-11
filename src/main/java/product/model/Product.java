@@ -14,7 +14,7 @@ import javax.persistence.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "product")
+@Table(name = "products")
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,4 +35,5 @@ public class Product {
     private Producer producer;
     private Boolean onSale = false;
     private Long salePrice = null;
+    private String img;
 }
