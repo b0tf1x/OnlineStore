@@ -9,7 +9,7 @@ import product.service.ProductService;
 
 @RestController
 @RequestMapping("/admin/product")
-@RequiredArgsConstructor(onConstructor_ = @Autowired)
+@RequiredArgsConstructor
 public class AdminProductController {
     private final ProductService productService;
 

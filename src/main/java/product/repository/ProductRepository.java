@@ -10,7 +10,7 @@ import java.util.List;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
-    @Query("select product from Product product " +
+    @Query("select product from Products " +
             "where product.category.name = ?1 ")
     List<ProductFullDto> findByCategory(String category);
 }

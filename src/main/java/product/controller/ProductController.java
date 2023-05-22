@@ -1,7 +1,6 @@
 package product.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import product.dto.ProductFullDto;
 import product.service.ProductService;
@@ -9,8 +8,8 @@ import product.service.ProductService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/product")
-@RequiredArgsConstructor(onConstructor_ = @Autowired)
+@RequestMapping(path ="/product")
+@RequiredArgsConstructor
 public class ProductController {
     private final ProductService productService;
     @GetMapping
